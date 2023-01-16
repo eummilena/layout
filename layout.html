@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+        body {
+            background: #111;
+            margin: 1rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header h3 {
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            padding: 0.7rem;
+            text-align: center;
+            margin: 0.5rem;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        section {
+            width: 600px;
+        }
+
+        .card {
+            background-color: #333;
+            border-radius: 5px;
+            color: #fff;
+            margin: 0;
+
+        }
+
+        .card-header h4 {
+            text-align: center;
+        }
+
+
+        .card-header {
+            padding: 0.3rem 0;
+            border-radius: 2px;
+            background-color: rgba(174, 174, 174, 0.661);
+            height: 65px;
+        }
+
+        .nav-tabs {
+            height: 245px;
+            margin: 0;
+            position: relative;
+        }
+
+        .nav-tabs ul {
+            list-style: none;
+        }
+
+        .nav-tabs ul li {
+            float: left;
+        }
+
+        .nav-item label {
+            width: 50px;
+            padding: 12px 10px 20px;
+            cursor: pointer;
+            border-radius: 2px;
+            display: block;
+            text-align: center;
+        }
+
+        .nav-link:checked~label {
+            color: #495057;
+            background-color: #fff;
+        }
+
+        .nav-link {
+            display: none;
+            position: absolute;
+
+        }
+
+        .content {
+            border-top: 1px solid #fff;
+            display: none;
+            padding: 1rem;
+            background-color: #333;
+            position: absolute;
+            width: 568px;
+            left: 0;
+        }
+
+        .nav-link:checked~.content {
+            display: block;
+        }
+
+        .nav-item:hover label {
+            color: #a60404;
+
+        }
+
+        .feed {
+            margin: 0;
+            padding: 0;
+        }
+
+        .feed li {
+            list-style: none;
+            padding: 1rem;
+        }
+
+        .feed-list {
+            display: flex;
+            box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+        }
+
+        .feed-list:hover {
+            background-color: rgba(88, 88, 88, 0.36);
+        }
+
+        .profile-photo {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 60%;
+        }
+
+        .photo-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50px;
+        }
+
+        .profile-photo span {
+            padding: 0 10px;
+            font-weight: 600;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            border-bottom: 1px solid #4f4f4f;
+            text-align: center;
+            padding: 10px;
+        }
+        tr:hover{
+            background-color: rgba(88, 88, 88, 0.36);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3 class="empresa">Empresa</h3>
+    </header>
+    <div class="row">
+        <section>
+            <div class="card">
+                <div class="card-header">
+                    <nav class="nav nav-tabs">
+                        <ul>
+                            <li class="nav-item">
+                                <input type="radio" name="tabs" class="nav-link" id="home" checked>
+                                <label for="home">Home</label>
+                                <div class="content">
+                                    <table>
+                                        <tr>
+                                            <td>10:00:00</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Arko</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10:00:00</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Arko</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10:00:00</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Arko</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <input type="radio" name="tabs" id="perfil" class="nav-link" id="option2">
+                                <label for="perfil">Perfil</label>
+                                <div class="content">
+                                    <table>
+                                        <tr>
+                                            <td>00:00:00</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Arko</td>
+                                        </tr>
+                                        <tr>
+                                            <td>00:00:00</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Arko</td>
+                                        </tr>
+                                        <tr>
+                                            <td>00:00:00</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Arko</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <input type="radio" name="tabs" id="contato" class="nav-link" id="option3">
+                                <label for="contato">Contato</label>
+                                <div class="content">
+                                    <table>
+                                        <tr>
+                                            <td>04:00:00</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Arko</td>
+                                        </tr>
+                                        <tr>
+                                            <td>03:00:00</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Arko</td>
+                                        </tr>
+                                        <tr>
+                                            <td>13:00:00</td>
+                                            <td>Lorem ipsum dolor sit amet.</td>
+                                            <td>Arko</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+        </section>
+        <section>
+            <div class="card">
+                <header class="card-header">
+                    <h4>Lorem ipsum</h4>
+                </header>
+                <div class="card-body">
+                    <ul class="feed">
+                        <li class="feed-list">
+                            <div class="profile-photo">
+                                <img src="../Downloads/avatar.svg" alt="foto do perfil" class="photo-img">
+                                <span>Milena Mota</span>
+                            </div>
+                            <div class="chat">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus laoreet.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="feed-list">
+                            <div class="profile-photo">
+                                <img src="../Downloads/avatar.svg" alt="foto do perfil" class="photo-img">
+                                <span>Lucas Freitas</span>
+                            </div>
+                            <div class="chat">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus laoreet.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>l
