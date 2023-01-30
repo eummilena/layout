@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    * {
+      color: #f4f4f4;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #111;
+    }
+
+    .container {
+      display:  grid;
+      grid-gap: 5px;    
+      grid-template-columns: 350px 350px 500px;
+      grid-template-rows: auto auto auto;
+      grid-template-areas:
+        "card-alerta card-agenda card-mapas"
+        "card-alerta card-agenda card-documentos";
+        margin: 1rem 2rem;
+
+    }
+
+    .card {
+      padding: 1rem;
+      background-color: #333;
+      border-radius: 5px;
+    }
+    .card h3{
+      text-align: center;
+    }
+
+    .card-header {
+      padding: 0.75rem;
+      border-bottom: 1px solid rgba(148, 148, 148, 0.359);
+      box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    }
+
+    nav .nav-li {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+    }
+
+    .nav-li {
+      list-style: none;
+    }
+
+    .nav-li a {
+      text-decoration: none;
+      color: #ff1111;
+
+    }
+
+    .nav-li a:hover {
+      /* background-color:  #ca0c0c; */
+      /* padding: .5rem; */
+      /* border-radius: 5px; */
+      color: #f4f4f4;
+    }
+
+    .nav-li a:active {
+      background-color: #ca0c0c;
+      color: #f4f4f4;
+
+
+    }
+
+    .card-body {
+      background-color: #333;
+    }
+
+    .agendas {
+      padding: 5px;
+      font-size: 14px;
+    }
+
+    .agendas li {
+      list-style: none;
+      padding: 5px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .agendas li a {
+      text-decoration: none;
+    }
+    .card-alerta{
+      grid-area: card-alerta;
+    }
+    .card-agenda{
+      grid-area: card-agenda;
+    }
+    .card-mapas{
+      grid-area: card-mapas;
+    }
+    .card-documentos{
+      grid-area: card-documentos;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="card card-alerta">
+      <h3>Alertas</h3>
+      <header class="card-header">
+        <nav>
+          <ul class="nav-li">
+            <li><a href="#">Título</a></li>
+            <li><a href="#">Data</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="card-body">
+        <ul class="agendas">
+          <li> <a href="#">Lorem ipsum</a> <span>00-00-0000</span> </li>
+          <li> <a href="#">Lorem ipsum</a> <span>00-00-0000</span> </li>
+          <li> <a href="#">Lorem ipsum</a> <span>00-00-0000</span> </li>
+          <li> <a href="#">Lorem ipsum</a> <span>00-00-0000</span> </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="card card-agenda">
+      <h3>Agenda</h3>
+      <header class="card-header">
+        <nav>
+          <ul class="nav-li">
+            <li><a href="#">Título</a></li>
+            <li><a href="#">Local</a></li>
+            <li><a href="#">Data</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="card-body">
+        <ul class="agendas">
+          <li>
+            <a href="#">Lorem ipsum</a>
+            <p>Somewhere</p>
+            <span>00-00-0000</span>
+          </li>
+          <li>
+            <a href="#">Lorem ipsum</a>
+            <p>Somewhere</p>
+            <span>00-00-0000</span>
+          </li>
+          <li>
+            <a href="#">Lorem ipsum</a>
+            <p>Somewhere</p>
+            <span>00-00-0000</span>
+          </li>
+          <li>
+            <a href="#">Lorem ipsum</a>
+            <p>Somewhere</p>
+            <span>00-00-0000</span>
+          </li>
+          <li>
+            <a href="#">Lorem ipsum</a>
+            <p>Somewhere</p>
+            <span>00-00-0000</span>
+          </li>
+          <li>
+            <a href="#">Lorem ipsum</a>
+            <p>Somewhere</p>
+            <span>00-00-0000</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="card card-mapas">
+      <h3>Mapas</h3>
+      <header class="card-header">
+        <nav>
+          <ul class="nav-li">
+            <li><a href="#">Título</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="card-body">
+        <ul class="agendas">
+          <li>
+            <a href="#">Lorem ipsum dolor sit amet</a>
+          </li>
+          <li>
+            <a href="#">Lorem ipsum dolor sit amet</a>
+          </li>
+          <li>
+            <a href="#">Lorem ipsum dolor sit amet</a>
+          </li>
+          <li>
+            <a href="#">Lorem ipsum dolor sit amet</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card card-documentos">
+      <h3>Documentos</h3>
+      <header class="card-header">
+        <nav>
+          <ul class="nav-li">
+            <li><a href="#">Documentos</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="card-body">
+        <ul class="agendas">
+          <li> 
+            <a href="#">Lorem ipsum</a> 
+            <span>doc</span> 
+          </li>
+          <li> 
+            <a href="#">Lorem ipsum</a> 
+            <span>doc</span> 
+          </li>
+          <li> 
+            <a href="#">Lorem ipsum</a> 
+            <span>doc</span> 
+          </li>
+          <li> 
+            <a href="#">Lorem ipsum</a> 
+            <span>doc</span> 
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'Popins', sans-serif;
+            color: #ced4da;
+        }
+
+        body {
+            background: #333;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container-cadastro {
+            display: flex;
+        }
+
+        .form-cad {
+            display: block;
+            padding: 2rem;
+            margin: 1rem auto;
+            border-radius: 5px;
+            background-color: rgb(32, 32, 32);
+        }
+
+        .align input {
+            display: flex;
+            margin: .5rem;
+        }
+
+        .form-control {
+            padding: .5rem;
+            width: 400px;
+            border-radius: 5px;
+            border: 1px solid #444;
+            background-color: #4f4f4f;
+        }
+
+        .privacy {
+            display: flex;
+            flex-direction: row-reverse;
+            margin: 1rem;
+        }
+
+  
+
+        .privacy {
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            height: 30px;
+            width: 30px;
+            background-color: #d5d5d5;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .privacy label {
+            color: #4c4c4c;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"]:after {
+            font-family: "Font Awesome 5 Free";
+            content: "\f00c";
+            font-weight: 600;
+            color: #fff;
+            display: none;
+        }
+
+        input[type="checkbox"]:hover {
+            background-color: #a5a5a5;
+        }
+
+        input[type="checkbox"]:checked {
+            background-color: rgb(109, 6, 3);
+        }
+
+        input[type="checkbox"]:checked:after {
+            display: block;
+        }
+        .btn-cad{
+            display: flex;
+            justify-content: flex-end;
+        }
+        .btn-cad button{
+            background-color: rgb(109, 6, 3);
+            border: none;
+            border-radius: 5px;
+            padding: .75rem;
+            cursor: pointer;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container-cadastro">
+        <form action="" class="form-cad">
+            <div class="align">
+                <label for="email">Email</label>
+                <input type="email" name="" id="" class="form-control" value="mailto@email.com" readonly>
+            </div>
+            <div class="align">
+                <label for="nome">Nome</label>
+                <input type="text" name="name" id="" class="form-control" required>
+            </div>
+            <div class="align">
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" name="lastName" id="" class="form-control" required>
+            </div>
+            <div class="align">
+                <label for="whatsapp">Whatsapp</label>
+                <input type="tel" name="tel" id="telefone" class="form-control" maxlength="15" pattern="\(\d{2}\)\s*\d{5}-\d{4}" required>
+            </div>
+
+            <div class="align">
+                <label for="senha">Senha</label>
+                <input type="password" name="" id="" class="form-control" required>
+            </div>
+            <div class="align">
+                <label for="confirmar senha">Confirmação de senha</label>
+                <input type="password" name="" id="" class="form-control" required>
+            </div>
+            <div class="privacy">
+                <label for="política de privacidade">Política de privacidade</label>
+                <input type="checkbox" name="" id="" value="">
+            </div>
+            <div class="btn-cad">
+                <button type="submit" class="btn">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+
+const tel = document.getElementById('telefone');
+
+tel.addEventListener('keypress', (e) => mascaraTelefone(e.target.value));
+tel.addEventListener('change', (e) => mascaraTelefone(e.target.value));
+
+const mascaraTelefone = (valor) => {
+    valor = valor.replace(/\D/g, "");
+    valor = valor.replace(/^(\d{2})(\d)/g, "($1) $2");
+    valor = valor.replace(/(\d)(\d{4})$/, "$1-$2");
+    tel.value = valor 
+}
+</script>
+</html>
